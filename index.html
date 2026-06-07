@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Pomodoro Timer</title>
+ <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="work-mode">
+ <div class="container">
+ <aside class="sidebar">
+ <h3>Tasks</h3>
+ <input id="newTaskInput" placeholder="Add task and press Enter" />
+ <ul id="taskList"></ul>
+ </aside>
+ <main class="main">
+ <div class="timer">
+ <button id="modeToggle" class="btn" title="Switch work/break">Work Mode</button>
+ <div class="progress-ring">
+ <div class="timer-display">
+ <span id="minutes">25</span>:<span id="seconds">00</span>
+ </div>
+ </div>
+ <div class="controls">
+   <button id="start" class="btn">Start</button>
+ <button id="pause" class="btn">Pause</button>
+ <button id="reset" class="btn">Reset</button>
+ </div>
+ <div class="settings">
+ <label>Work <input id="workDuration" type="number" min="1" max="60" value="25"
+/> min</label>
+ <label>Break <input id="breakDuration" type="number" min="1" max="60" value="5" />
+min</label>
+ </div>
+ <div class="meta">
+ <span id="modeLabel">Time to focus!</span>
+ &nbsp;•&nbsp;Sessions today: <span id="sessionCount">0</span>
+ </div>
+ </div>
+ </main>
+ <div class="spacer"></div>
+ </div>
+ <audio id="completeSound" src="assets/sounds/complete.mp3" preload="auto"></audio>
+ <script type="module" src="js/app.js"></script>
+</body>
+</html>
